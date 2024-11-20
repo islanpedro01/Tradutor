@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #0575E6;
+}
+
+#botao-cadastro{
+    color: #0575E6;
+    border: 1px solid #0575E6;
+    background-color: whitesmoke;
+}
+
+#botao-cadastro:hover{
+    color: whitesmoke;
+    background-color: #0575E6 ;
+    border: 1px solid whitesmoke;
+}
