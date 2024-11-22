@@ -1,1 +1,17 @@
-<h1> HOME PAGE</h1>
+<div class = "flex mt-24 justify-center gap-40">
+    <button type="button" class="text-white bg-[#0575E6] hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 focus:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 w-1/12" (click)="texto()">TEXT</button>
+    <button type="button" class="text-white bg-[#0575E6] hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 focus:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 w-1/12" (click)="url()">URL</button>
+    <button type="button" class="text-white bg-[#0575E6] hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 focus:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 w-1/12" (click)="csv()">CSV</button>
+</div>
+@if (textoToogle){
+    <app-texto-traducao></app-texto-traducao>
+}
+@if (urlToogle){
+    <app-url-traducao></app-url-traducao>
+}
+@if (csvToogle){
+    <app-csv-traducao></app-csv-traducao>
+}
+
+
+
