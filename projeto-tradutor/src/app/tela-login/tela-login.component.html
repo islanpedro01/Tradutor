@@ -1,17 +1,38 @@
-<div class="flex items-center justify-around ">
-    <div class="left-side">Lado Esquerdo</div>
-    <div class="right-side flex items-center flex-col">
-        <div  class="flex items-center flex-col">
-            <form action="">
-                <input type="text" name="email" id="email" placeholder="Endereço de Email">
-                <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                <button id="login">Login</button>
-                <button>Esqueceu sua senha?</button>
-                <div>
-                    <span>Ainda não possui uma conta?</span>
-                    <button>Cadastre-se</button>
-                </div>
-            </form>
+<div class="flex min-h-screen items-center justify-center">
+    <div class="flex w-full max-w-4xl shadow-lg">
+      <div class="bg-gradient-to-b from-blue-500 left-side text-white w-1/2 p-16 flex flex-col justify-center">
+        <h1 class="text-3xl font-bold mb-4">Tradutor</h1>
+        <p class="text-sm mb-6">A melhor ferramenta para tradução de textos!</p>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded-full">
+          Saiba Mais
+        </button>
+      </div>
+      <div class="bg-white w-1/2 p-20 flex flex-col justify-center">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Faça seu login!</h2>
+        <form class="space-y-4" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" placeholder="Endereço de Email" input="email" name="email"
+              class="w-full border rounded-full border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="password" class="sr-only">Senha</label>
+            <input type="password" id="password" placeholder="Senha" input="password" name="password"
+              class="w-full border rounded-full border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <button type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full">
+            Login
+          </button>
+        </form>
+        <div class="mt-4 text-center">
+          <a href="#" class="text-blue-500 hover:underline text-sm">Esqueceu sua senha?</a>
         </div>
+        <div class="mt-4 text-center">
+          <p class="text-gray-600 text-sm">Ainda não possui uma conta? <a href="#"
+              class="text-blue-500 hover:underline">Cadastre-se</a></p>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+<div>
