@@ -1,1 +1,106 @@
-<p> TELA DE CADASTRO </p>
+<div class="flex h-screen">
+  <div class="w-1/2 bg-gradient-to-b from-blue-600 to-blue-800 text-white flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold">Tradutor</h1>
+    <p class="mt-4">A melhor ferramenta para tradução de textos!</p>
+    <button class="mt-6 px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded-full">
+      Saiba Mais
+    </button>
+  </div>
+  <div class="w-1/2 bg-white flex items-center justify-center">
+    <div class="w-2/3">
+      <div class="flex justify-center mb-8">
+        <div class="flex space-x-4">
+          <div
+            *ngFor="let step of [1, 2, 3]; let i = index"
+            [class]="
+              'w-8 h-8 flex items-center justify-center rounded-full border-2' +
+              (currentStep === i ? ' bg-blue-500 text-white border-blue-500' : ' border-gray-300')
+            "
+          >
+            {{ step }}
+          </div>
+        </div>
+      </div>
+      <form *ngIf="currentStep === 0">
+        <div class="space-y-4">
+          <input
+            type="email"
+            placeholder="E-mail"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Confirme sua senha"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <button
+          (click)="nextStep()"
+          type="button"
+          class="mt-6 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-400"
+        >
+          Cadastrar-se
+        </button>
+      </form>
+
+      <form *ngIf="currentStep === 1">
+        <div class="space-y-4">
+          <input
+            type="text"
+            placeholder="Idioma Fluente"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="Profissão"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="Certificação"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <button
+          (click)="nextStep()"
+          type="button"
+          class="mt-6 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-400"
+        >
+          Próximo
+        </button>
+      </form>
+
+      <form *ngIf="currentStep === 2">
+        <div class="space-y-4">
+          <input
+            type="text"
+            placeholder="Nome Completo"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="CPF"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="Nacionalidade"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <button
+          (click)="submitForm()"
+          type="button"
+          class="mt-6 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-400"
+        >
+          Finalizar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
